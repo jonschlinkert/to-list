@@ -1,0 +1,41 @@
+{
+  "name": "to-list",
+  "description": "Parse a string into a list object with text and level properties.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/to-list",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/to-list",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/to-list/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "keywords": [
+    "list",
+    "to"
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "bullets",
+        "list-item"
+      ]
+    },
+    "plugins": [
+      "gulp-format-md"
+    ]
+  }
+}
