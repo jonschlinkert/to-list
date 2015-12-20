@@ -37,6 +37,31 @@ var list = toList(str);
 //=> list[3].level === 2
 ```
 
+**Results in**
+
+The list is parsed into any array that looks something like:
+
+```js
+[ { text: 'This is item 1',
+    lead: [ '- ', index: 0, input: '- This is item 1' ],
+    level: 0 },
+  { text: 'This is item 2',
+    lead: [ '- ', index: 0, input: '- This is item 2' ],
+    level: 0 },
+  { text: 'This is item 3',
+    lead: [ '- ', index: 0, input: '- This is item 3' ],
+    level: 0 },
+  { text: 'This is sub-item A',
+    lead: [ '  * ', index: 0, input: '  * This is sub-item A' ],
+    level: 2 },
+  { text: 'This is sub-item B',
+    lead: [ '  * ', index: 0, input: '  * This is sub-item B' ],
+    level: 2 },
+  { text: 'This is sub-item C',
+    lead: [ '  * ', index: 0, input: '  * This is sub-item C' ],
+    level: 2 } ]
+```
+
 ### Item function
 
 Pass a function as the second argument to customize each item object as it's created:
