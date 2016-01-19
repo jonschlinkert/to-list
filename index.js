@@ -28,16 +28,16 @@ module.exports = function toList(str, fn) {
       var tabs = /^\t+/.exec(lead);
 
       if (spaces) {
-        level = spaces.length;
+        level = spaces[0].length;
       } else if (tabs) {
-        level = (tabs.length / 2);
+        level = (tabs[0].length / 2);
       }
     }
 
     line = line.slice(orig.length);
     var item = fn({
       text: line,
-      lead: lead,
+      lead: lead ? lead[0] : '',
       level: toEven(level)
     });
     list.push(item);

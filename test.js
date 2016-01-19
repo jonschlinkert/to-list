@@ -23,7 +23,7 @@ describe('to-list', function() {
     assert(list.length === 6);
   });
 
-  it('should create one level for each from space', function() {
+  it('should create one level for every two spaces', function() {
     var str = [
       '- This is item 1',
       '- This is item 2',
@@ -50,8 +50,8 @@ describe('to-list', function() {
 
     var list = toList(str);
 
-    assert(list[0].lead[0] === '- ');
-    assert(list[3].lead[0] === '  * ');
+    assert(list[0].lead === '- ');
+    assert(list[3].lead === '  * ');
   });
 
   it('should support passing a custom item function', function() {
